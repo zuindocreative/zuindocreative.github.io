@@ -1,0 +1,131 @@
+body {
+    background-color: black;
+    overflow: hidden;
+}
+
+.container {
+    color: white;
+    text-align: center;
+    margin: auto;
+    display: block;
+    justify-content: center;
+}
+
+.tekan {
+    background-color: pink;
+    border: none;
+    border-radius: 15px;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    box-shadow: 0 5px #999;
+    cursor: pointer;
+}
+
+.tekan:active {
+    background-color: pink;
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    z-index: 10;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19);
+    animation: box-opacity 4s;
+}
+
+#box1 {
+    transform-origin: bottom right;
+    border-radius: 0px 100px 0px 100px;
+    background: linear-gradient(160deg, #ee0979 0%, #ff6a00 100%);
+    animation: box-opacity 4s;
+}
+
+#box2 {
+    transform-origin: bottom left;
+    border-radius: 100px 0px 100px 0px;
+    background: linear-gradient(220deg, #ee0979 0%, #ff6a00 100%);
+    animation: box-opacity 5s;
+}
+
+#box3 {
+    transform-origin: top right;
+    border-radius: 100px 0px 100px 0px;
+    background: linear-gradient(30deg, #ee0979 0%, #ff6a00 100%);
+    animation: box-opacity 6s;
+}
+
+#box4 {
+    transform-origin: top left;
+    border-radius: 0px 100px 0px 100px;
+    background: linear-gradient(320deg, #ee0979 0%, #ff6a00 100%);
+    animation: box-opacity 7s;
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: #ffef00;
+    z-index: 100;
+    margin-top: -298px;
+    animation: box-opacity 9s;
+}
+
+.line {
+    background: #0f9b0f;
+    margin-top: -130px;
+    width: 25px;
+    height: 310px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    animation: box-opacity 10s, line-scale 5s;
+}
+
+.fa-heart {
+    color: pink;
+    font-size: 25px;
+    position: absolute;
+    animation:  heartMove linear 1;
+    top: -10vh;
+    z-index: 0;
+}
+
+@keyframes box-opacity {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes line-scale {
+    0% {
+        transform: scaleY(0);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes heartMove {
+    0%{
+        transform: translateY(-10vh) ;
+    }
+    100%{
+        transform: translateY(110vh) ;
+    }
+}
