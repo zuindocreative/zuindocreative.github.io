@@ -183,18 +183,19 @@ section {
 
 .scroll-top i {
   font-size: 24px;
-  color: var(--color-secondary);
+  color: white;
   line-height: 0;
 }
 
 .scroll-top:hover {
   background: #ffc732;
-  color: #fff;
+  color: var(--color-secondary);
 }
 
 .scroll-top.active {
   visibility: visible;
   opacity: 1;
+  color: var(--color-secondary);
 }
 
 /*--------------------------------------------------------------
